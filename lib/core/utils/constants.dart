@@ -11,5 +11,3 @@ class colors {
   static const KprimaryColor = Color(0xFF100b20);
 }
 //const KprimaryColor = Color(0xFF100b20);
-
-
