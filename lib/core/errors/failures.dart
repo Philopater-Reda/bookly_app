@@ -4,8 +4,9 @@ import 'package:dio/dio.dart';
 
 abstract class Failure {
   final String errMassage;
- const Failure({this.errMassage = ''});
+  const Failure({this.errMassage = ''});
 }
+
 class ServerFailure extends Failure {
   const ServerFailure(String errMassage) : super(errMassage: errMassage);
   //ServerFailure(super.errMassage);
@@ -29,10 +30,10 @@ class ServerFailure extends Failure {
       case DioExceptionType.badCertificate:
         return const ServerFailure('Bad Certificate');
       case DioExceptionType.connectionError:
-        return const ServerFailure('Connection Error');      
+        return const ServerFailure('Connection Error');
     }
   }
-  factory ServerFailure.fromResponse(int statusCode , dynamic response) {
+  factory ServerFailure.fromResponse(int statusCode, dynamic response) {
     switch (statusCode) {
       case 400:
         return const ServerFailure('Bad Request');
