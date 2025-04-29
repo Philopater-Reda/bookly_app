@@ -18,7 +18,10 @@ class ServerFailure extends Failure {
       case DioErrorType.receiveTimeout:
         return const ServerFailure('Receive Timeout');
       case DioErrorType.badResponse:
-        return const ServerFailure('Server Error');
+        return ServerFailure.fromResponse(
+          dioError.response!.statusCode!,
+          dioError.response!.data,
+        );
       case DioErrorType.cancel:
         return const ServerFailure('Request Cancelled');
       case DioErrorType.unknown:
@@ -26,8 +29,7 @@ class ServerFailure extends Failure {
       case DioExceptionType.badCertificate:
         return const ServerFailure('Bad Certificate');
       case DioExceptionType.connectionError:
-        return const ServerFailure('Connection Error');
-      
+        return const ServerFailure('Connection Error');      
     }
   }
   factory ServerFailure.fromResponse(int statusCode , dynamic response) {
