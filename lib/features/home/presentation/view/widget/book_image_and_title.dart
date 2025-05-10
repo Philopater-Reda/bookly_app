@@ -16,7 +16,9 @@ class BookImageAndTitle extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: width * 0.25,
           ),
-          child: const CustomListViewItem(),
+          child: const CustomListViewItem(
+            imageUrl: "https://www.vecteezy.com/photo/36324708-ai-generated-picture-of-a-tiger-walking-in-the-forest", // Replace with actual image URL
+          ),
         ),
         const SizedBox(
           height: 43,

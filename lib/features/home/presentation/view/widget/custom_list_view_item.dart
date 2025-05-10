@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/assets.dart';
 
 class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({super.key});
+  const CustomListViewItem({super.key, required this.imageUrl});
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,10 @@ class CustomListViewItem extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            image: const DecorationImage(
+            image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage(
-                AssetsData.book1,
+              image: NetworkImage(
+                imageUrl,
               ),
             ),
           ),
