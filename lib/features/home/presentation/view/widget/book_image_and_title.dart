@@ -41,6 +41,8 @@ class BookImageAndTitle extends StatelessWidget {
           height: 4,
         ),
         const BookRating(
+          rating: 4,
+          count: 245,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(

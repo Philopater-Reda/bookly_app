@@ -67,7 +67,10 @@ class BookListItem extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const BookRating(),
+                          const BookRating(
+                            rating: 4,
+                            count: 245,
+                          ),
                         ],
                       ),
                     ],

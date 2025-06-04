@@ -26,7 +26,7 @@ class FeatureBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return  Padding(
-                  padding: EdgeInsets.only(right: 16),
+                  padding: const EdgeInsets.only(right: 16),
                   child: CustomListViewItem(
                     imageUrl: state.books[index].volumeInfo.imageLinks
                         .thumbnail,
