@@ -4,7 +4,7 @@ import 'package:bookly_app/features/home/presentation/view/widget/book_rating.da
 import 'package:bookly_app/features/home/presentation/view/widget/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/utils/assets.dart';
+// import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -14,7 +14,7 @@ class BestSellerListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: GestureDetector(
         onTap: () {
           GoRouter.of(context).push(AppRouter.bookDetalsView);
@@ -24,7 +24,8 @@ class BestSellerListViewItem extends StatelessWidget {
           child: Row(
             children: [
               CustomListViewItem(
-                  imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,),
+                imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
+              ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, bottom: 14),
