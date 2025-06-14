@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'Book_list_item.dart';
-
 class SearchResultListView extends StatelessWidget {
   const SearchResultListView({super.key});
 
