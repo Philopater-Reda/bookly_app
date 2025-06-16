@@ -17,7 +17,8 @@ class BookImageAndTitle extends StatelessWidget {
             horizontal: width * 0.25,
           ),
           child: const CustomListViewItem(
-            imageUrl: "https://www.vecteezy.com/photo/36324708-ai-generated-picture-of-a-tiger-walking-in-the-forest", // Replace with actual image URL
+            imageUrl:
+                "https://www.vecteezy.com/photo/36324708-ai-generated-picture-of-a-tiger-walking-in-the-forest", // Replace with actual image URL
           ),
         ),
         const SizedBox(

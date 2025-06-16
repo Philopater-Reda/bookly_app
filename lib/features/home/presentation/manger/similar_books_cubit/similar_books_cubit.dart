@@ -10,9 +10,11 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
   SimilarBooksCubit(this.homeRepo) : super(SimilarBooksInitial());
    final HomeRepo homeRepo;
 
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchSimilarBooks({required String category}) async {
     emit(SimilarBooksLoading());
-    var result = await homeRepo.fetchFuturedBooks();
+    var result = await homeRepo.fetchSimilarBooks(
+      category: category,
+    );
     result.fold(
       (failure) => emit( SimilarBooksFailure(failure.errMassage)),
       (books) => emit( SimilarBooksSuccess(books)),
